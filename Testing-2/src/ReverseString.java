@@ -7,14 +7,15 @@ public class ReverseString {
 		
 		System.out.println("Enter your String ");
 		Scanner sc= new Scanner(System.in); 
-		String name= sc.nextLine();
+		char name[]= sc.nextLine().toCharArray();
+		
+		int l=name.length;
 				
-		int l=name.length();
-		System.out.println("Length of " + name + " is "+ l);
-        
-		
-		
-
-	}
-
+		for (int i=l-1;i>=0;i--)
+		{
+			System.out.print(name[i]);
+		}
+			
+				
+		}
 }
