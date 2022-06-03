@@ -11,8 +11,14 @@ public class OddEven {
 		
 		int i=3;
 		
+		if (n<=3)
+			System.out.println("Enter a number that is greater than 3");
+		
+		else
+		{
+		
 		System.out.println("The odd numbers before " + n + " are");
-		while(i<=n)
+		while(i<=n && n>3)
 		{
 			if (i%2!=0)
 				System.out.print(i + " ");
@@ -20,7 +26,7 @@ public class OddEven {
 			
 				
 			
-		}
+		}}
 	}
 
 }
