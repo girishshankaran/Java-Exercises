@@ -1,1 +1,4 @@
-
+ public static void main (Strings[args])
+ {
+   Sytem.out.println("This is a test message");
+  }
