@@ -2,3 +2,8 @@
  {
    Sytem.out.println("This is a test message");
   }
+
+  if (age<=18)
+     System.out.println("College");
+  else
+     System.out.println("School");
