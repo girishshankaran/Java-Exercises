@@ -1,0 +1,55 @@
+package example.com;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Flight {
+
+	int flightID;
+	String origin;
+	String destination;
+	LocalDate departureDate;
+	
+	ArrayList<Passenger> passenger=new ArrayList<>();
+	
+	public Flight(int flightID, String origin, String destination, LocalDate departureDate)
+	{
+		this.departureDate=departureDate;
+		this.flightID=flightID;
+		this.origin=origin;
+		this.destination=destination;
+	}
+	
+	public String addPassenger(Passenger p)
+	{
+		passenger.add(p);
+		System.out.println(p.p_name + " is added");
+		return(p.p_name);		
+	}
+	
+	public void findPassenger(int id)
+	{
+		for (int i=0;i<passenger.size();i++)
+		{
+			if (passenger.get(i).p_id==id)
+			{
+				System.out.println(passenger.get(i).p_name + " found");
+			}
+		}
+	}
+	
+	public int[] findAllFlights(int id)
+	{  int[] l=new l();
+		int j=0;
+		for (int i=0;i<passenger.size();i++)
+		{
+			if (passenger.get(i).p_id==id)
+			{
+				l[j]=id;
+				j++;
+				System.out.println(passenger.get(i).p_name + " found");
+			}
+		}
+	}
+	
+}	
+

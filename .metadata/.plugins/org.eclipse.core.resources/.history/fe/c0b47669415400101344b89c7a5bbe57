@@ -1,0 +1,13 @@
+package example.com;
+
+public class Rectangle {
+
+	int width;
+	int height;
+	
+	private Rectangle()
+	{
+		this.width=width;
+		this.height=height;
+	}
+}

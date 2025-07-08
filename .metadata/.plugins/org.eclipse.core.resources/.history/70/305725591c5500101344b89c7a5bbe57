@@ -1,0 +1,38 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ContactList {
+	
+	ArrayList<Contact> ContactSum=new ArrayList<>();
+	
+	public void addContacts(Contact con)
+	{
+		ContactSum.add(con);
+		System.out.println(con.name + " added");
+	}
+
+	public void searchContact(String n)
+	{
+		for (int i=0;i<ContactSum.size();i++)
+		{
+			if (ContactSum.get(i).name.equals(n))
+				System.out.println(n + " Found");
+				
+		}
+	}
+	
+	public void deleteContact(String n)
+	{
+		for (int i=0;i<ContactSum.size();i++)
+		{
+			if (ContactSum.get(i).name.equals(n))
+				{System.out.println(n + " Found and Removed");
+				 ContactSum.remove(i);
+				}
+			else
+				System.out.println(n + " Not found");
+		}
+	}
+
+}

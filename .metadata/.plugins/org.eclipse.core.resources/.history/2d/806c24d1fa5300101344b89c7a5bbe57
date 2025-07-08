@@ -1,0 +1,27 @@
+package example.com;
+
+public class BiggestOfNumbersinArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] numbers= {10,30,20,50,40,5,1};
+		int largestNumber=calculate_max(numbers,numbers.length);
+
+	}
+	
+	private static int calculate_max(int[] numbers, int length) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static int calculate_max(int[] numbers,int l)
+	{
+		
+		
+		
+		return l;
+		
+	}
+
+}

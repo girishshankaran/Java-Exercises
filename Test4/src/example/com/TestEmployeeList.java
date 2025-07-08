@@ -1,0 +1,25 @@
+package example.com;
+
+public class TestEmployeeList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee Steve=new Employee("Steve","Computer",1000);
+		Employee Raj=new Employee("Raj","Electrical",1001);
+		Employee Tom=new Employee("Tom","Electrical",1002);
+		Employee Mike=new Employee("Mike","Computer",1003);
+		
+		EmployeeList MyList=new EmployeeList();
+		MyList.addEmployee(Steve);
+		MyList.addEmployee(Tom);
+		MyList.addEmployee(Raj);
+		MyList.addEmployee(Mike);
+		
+		MyList.deleteEmployee("Raju");
+		
+		MyList.listEmployeesByDepartment("Electrical");
+		
+	}
+
+}

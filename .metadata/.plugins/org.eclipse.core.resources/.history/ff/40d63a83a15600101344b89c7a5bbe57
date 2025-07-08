@@ -1,0 +1,14 @@
+package example.com;
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Rectangle myRect=new Rectangle(10,20);
+		System.out.println("Area: " + myRect.findArea(10, 20);
+		myRect.findPerimeter(10, 20);
+
+	}
+
+}

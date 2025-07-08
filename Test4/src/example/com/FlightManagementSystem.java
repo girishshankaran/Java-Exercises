@@ -1,0 +1,51 @@
+package example.com;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FlightManagementSystem {
+    public static void main(String[] args) {
+        // Create passengers
+        new Passenger(1, "alice");
+        new Passenger(2, "bob");
+
+        // Create flights
+        new Flight(101, "NYC", "LA", LocalDate.now().plusDays(2), 1); // alice, future
+        new Flight(102, "LA", "NYC", LocalDate.now().minusDays(1), 1); // alice, past
+        new Flight(103, "NYC", "Paris", LocalDate.now().plusDays(5), 1); // alice, future
+        new Flight(104, "NYC", "London", LocalDate.now().plusDays(3), 2); // bob, future
+
+        Passenger alice = null;
+        for (int id : Passenger.getPassengers()) {
+            Passenger p = Passenger.getPassenger(id);
+            if (p.name.equals("alice")) { // FIXED: Use .equals()
+                alice = p;
+                break;
+            }
+        }
+
+        if (alice == null) {
+            System.out.println("Passenger alice not found.");
+            return;
+        }
+
+        List<Flight> flights = new ArrayList<>();
+        for (int id : Flight.getFlightsByPassenger(alice.id)) {
+            Flight f = Flight.getFlight(id);
+            if (f.departure.isAfter(LocalDate.now())) {
+                flights.add(f);
+            }
+        }
+
+        // Sort flights by departure date
+        flights.sort((lhs, rhs) -> lhs.departure.compareTo(rhs.departure));
+
+        // Print flight details
+        for (Flight f : flights) {
+            System.out.println("Departure date: " + f.departure);
+            System.out.println(" Origin: " + f.origin);
+            System.out.println(" Destination: " + f.destination);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+package example.com;
+
+public class GreatestNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a=10;
+		int b=20;
+		
+		int calculate(a, b);
+		
+		
+		
+		int calculate(int a, int b)
+		{
+			if (a>b)
+				return (a);
+			else
+				return(b);
+		}
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
+
+
+class Library {
+	private ArrayList<Book> books = new ArrayList<>();
+
+    // Add a book to the library
+    public void addBook(Book book) {
+        books.add(book);
+        
+        System.out.println(book.getTitle() + " added to the library.");
+    }
+
+    // Remove a book by ISBN
+    public boolean removeBookByISBN(String isbn) {
+        for (Book book : books) {
+            if (book.getISBN().equals(isbn)) {
+                books.remove(book);
+                
+                System.out.println(book.getTitle() + " removed from the library.");
+                return true;
+            }
+        }
+        System.out.println("Book with ISBN " + isbn + " not found.");
+        return false;
+    }
+
+    // Display all books in the library
+    public void displayBooks() {
+        if (books.isEmpty()) {
+            System.out.println("The library is empty.");
+            return;
+        }
+        System.out.println("Books currently in the library:");
+        for (Book book : books) {
+            System.out.println(book);
+        }
+    }
+}

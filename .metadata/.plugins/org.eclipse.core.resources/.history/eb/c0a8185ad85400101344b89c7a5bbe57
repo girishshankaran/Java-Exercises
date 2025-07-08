@@ -1,0 +1,11 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Course {
+
+	String courseName;
+	ArrayList<Student> MyStudent=new ArrayList<>();
+	
+	
+}

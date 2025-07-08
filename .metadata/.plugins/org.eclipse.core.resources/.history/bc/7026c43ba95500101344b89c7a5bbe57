@@ -1,0 +1,32 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;
+
+public class Passenger {
+    int id;
+    String name;
+    static ArrayList<Passenger> allPassengers = new ArrayList<>();
+
+    public Passenger(int id, String name) {
+        this.id = id;
+        this.name = name;
+        allPassengers.add(this);
+    }
+
+    public static ArrayList<Integer> getPassengers() {
+        ArrayList<Integer> ids = new ArrayList<>();
+        for (Passenger p : allPassengers) {
+            ids.add(p.id);
+        }
+        return ids;
+    }
+
+    public static Passenger getPassenger(int id) {
+        for (Passenger p : allPassengers) {
+            if (p.id == id) return p;
+        }
+        return null;
+    }
+}
+

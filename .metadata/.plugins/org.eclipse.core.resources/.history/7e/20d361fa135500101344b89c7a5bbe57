@@ -1,0 +1,15 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestSearchElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SearchElement Mine = new SearchElement();
+		Mine.addElement("Girish");
+		Mine.addElement("Vivaan");
+		Mine.addElement("Tiana");
+	}
+
+}

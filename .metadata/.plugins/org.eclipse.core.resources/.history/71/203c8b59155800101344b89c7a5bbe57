@@ -1,0 +1,28 @@
+package example.com;
+import java.util.ArrayList;
+
+public class StudentManager {
+	
+	ArrayList<Student> mystudents=new ArrayList<>();
+	
+	public void addStudent(Student std)
+
+	{
+		mystudents.add(std);
+		System.out.println(std.name+ "added");
+		
+	}
+	
+	public void viewStudents()
+
+	{
+		for (int i=0;i<mystudents.size();i++)
+		{
+			System.out.println(mystudents.get(i).getStudentName());
+		}
+		
+	}
+	
+	
+
+}

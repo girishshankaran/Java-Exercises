@@ -1,0 +1,20 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Contact {
+	
+	String name;
+	String phone_number;
+	String email_id;
+	
+	
+	public Contact(String name, String phone_number, String email_id)
+	{
+		this.name=name;
+		this.phone_number=phone_number;
+		this.email_id=email_id;
+	}
+	
+	
+}

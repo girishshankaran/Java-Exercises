@@ -1,0 +1,16 @@
+package example.com;
+
+public class Book {
+	
+	String title;
+	String author;
+	String ISBN;
+	
+	public Book()
+	{
+		this.title=title;
+		this.author=author;
+		this.ISBN=ISBN;
+	}
+
+}

@@ -1,0 +1,45 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployeeList {
+
+	ArrayList<Employee> Emplist=new ArrayList<>();
+	
+	public void addEmployee(Employee emp)
+	{
+		Emplist.add(emp);
+		System.out.println(emp.name + " added");
+	}
+
+	public void deleteEmployee(String n)
+	{
+		for (int i=0;i<Emplist.size();i++)
+		{
+			if (Emplist.get(i).name.equals(n))
+			{
+				Emplist.remove(i);
+				System.out.println(n + " is removed");
+				break;
+			}
+			else
+				System.out.println(n + " not found");
+		}
+	}
+	
+	public void listEmployeesByDepartment(String dep)
+	{
+		for (int i=0;i<Emplist.size();i++)
+		{
+			if (Emplist.get(i).equals(dep))
+			{
+				System.out.println(Emplist.get(i));
+				System.out.print(Emplist.get(i).name);
+				System.out.print(Emplist.get(i).department);
+				System.out.print(Emplist.get(i).salary);
+			}
+		}
+		
+	}
+	
+}

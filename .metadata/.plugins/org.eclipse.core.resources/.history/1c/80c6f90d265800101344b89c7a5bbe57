@@ -1,0 +1,42 @@
+package example.com;
+import java.util.ArrayList;
+
+public class StudentManager {
+	
+	ArrayList<Student> mystudents=new ArrayList<>();
+	
+	public void addStudent(Student std)
+
+	{
+		mystudents.add(std);
+		System.out.println(std.name+ "added");
+		
+	}
+	
+	public void viewStudents()
+
+	{	System.out.println("The list is: ");
+		for (int i=0;i<mystudents.size();i++)
+		{
+			System.out.println(mystudents.get(i).getStudentName());
+		}
+		
+	}
+	
+	public void searchStudents(int id)
+	{	int check=1;
+		for (int i=0;i<mystudents.size();i++)
+		{
+			if (mystudents.get(i).student_id==id)
+			{
+				System.out.println(id +" Found");
+				System.out.println("Name: " + mystudents.get(i).name);
+				check=0;
+			}
+		}
+		
+		if (check==1)
+			System.out.println(id + " not found");
+	}
+
+}

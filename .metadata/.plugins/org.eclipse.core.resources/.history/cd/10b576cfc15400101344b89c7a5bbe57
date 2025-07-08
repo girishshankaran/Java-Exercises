@@ -1,0 +1,18 @@
+package example.com;
+
+import java.util.ArrayList;
+
+public class TestColors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String> MyColors=new ArrayList<>();
+		MyColors.add("blue");
+		MyColors.add("green");
+		MyColors.add("red");
+		MyColors.remove(0);
+		MyColors.add(0, "blue");
+	}
+
+}

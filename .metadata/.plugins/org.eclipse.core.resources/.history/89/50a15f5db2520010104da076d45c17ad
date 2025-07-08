@@ -1,0 +1,24 @@
+package example.com;
+
+public class GreatestNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] a= {10,5,7,12,35,23};
+		int i;
+		int n=6;
+		int large=0;
+		
+		for (i=0;i<=n;i++)
+		{
+			if (a[i]>a[i+1])
+				large=a[i];
+			else
+				large=a[i+1];
+		}
+		
+		System.out.println("Largest number is"+ large);
+	}
+
+}

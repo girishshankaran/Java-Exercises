@@ -1,0 +1,26 @@
+package example.com;
+
+public class TestFlight {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Passenger passenger1=new Passenger(101,"Girish");
+		Passenger passenger2=new Passenger(102,"Vivaan");
+		Passenger passenger3=new Passenger(103,"Tiana");
+		Passenger passenger4=new Passenger(104,"Subi");
+		
+		
+		Flight flight1=new Flight(1001,"LA","WD","07/10/2025");
+		Flight flight2=new Flight(1002,"MD","LA","08/10/2025");
+		Flight flight3=new Flight(1003,"CA","MI","10/10/2025");
+		Flight flight4=new Flight(1004,"FL","CG","08/10/2025");
+		
+		flight1.addPassenger(passenger1);
+		flight2.addPassenger(passenger2);
+		flight3.addPassenger(passenger3);
+		flight4.addPassenger(passenger4);
+		
+
+	}
+
+}

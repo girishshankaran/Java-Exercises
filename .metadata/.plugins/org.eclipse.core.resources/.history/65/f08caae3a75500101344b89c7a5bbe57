@@ -1,0 +1,35 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Flight {
+    int id;
+    String origin;
+    String destination;
+    LocalDate departure;
+    int passengerId;
+    static ArrayList<Flight> allFlights = new ArrayList<>();
+
+    public Flight(int id, String origin, String destination, LocalDate departure, int passengerId) {
+        this.id = id;
+        this.origin = origin;
+        this.destination = destination;
+        this.departure = departure;
+        this.passengerId = passengerId;
+        allFlights.add(this);
+    }
+
+    public static ArrayList<Integer> getFlightsByPassenger(int passengerId) {
+        ArrayList<Integer> ids = new ArrayList<>();
+        for (Flight f : allFlights) {
+            if (f.passengerId == passengerId) ids.add(f.id);
+        }
+        return ids;
+    }
+
+    public static Flight getFlight(int id) {
+        for (Flight f : allFlights) {
+            if (f.id == id) return f;
+        }
+        return null;
+    }
+}

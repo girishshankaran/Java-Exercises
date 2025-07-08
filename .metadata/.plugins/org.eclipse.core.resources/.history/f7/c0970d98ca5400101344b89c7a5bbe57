@@ -1,0 +1,25 @@
+package example.com;
+
+public class Book {
+	
+	String title;
+	String author;
+	String ISBN;
+	
+	public Book()
+	{
+		this.title=title;
+		this.author=author;
+		this.ISBN=ISBN;
+	}
+
+	public void add_books(String title,String author,String ISBN)
+	{
+		System.out.println(title + " added");
+	}
+	
+	public void remove_books(String title,String author,String ISBN)
+	{
+		System.out.println(title + " removed");
+	}
+}

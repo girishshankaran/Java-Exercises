@@ -1,0 +1,18 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Course {
+
+	String courseName;
+	ArrayList<Student> MyStudent=new ArrayList<>();
+	
+	public String add_student(Student students)
+	{
+		MyStudent.add(students);
+		System.out.println(students.name + "is added");
+		return (students.name);
+	}
+	
+	
+}

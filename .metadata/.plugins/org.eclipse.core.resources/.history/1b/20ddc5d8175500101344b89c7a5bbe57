@@ -1,0 +1,15 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ContactList {
+	
+	ArrayList<Contact> ContactSum=new ArrayList<>();
+	
+	public void addContacts(Contact con)
+	{
+		ContactSum.add(con);
+	}
+	
+
+}

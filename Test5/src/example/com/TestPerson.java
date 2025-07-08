@@ -1,0 +1,14 @@
+package example.com;
+
+public class TestPerson {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Person myPerson=new Person("Girish",20);
+		System.out.println(myPerson.getName());
+		System.out.println(myPerson.getAge());
+
+	}
+
+}

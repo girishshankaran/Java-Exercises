@@ -1,0 +1,67 @@
+package example.com;
+
+public class BankAccount {
+
+	private String accountNumber;
+	private double balance;
+	private double interestRate;
+	
+	public BankAccount(String accountNumber, double balance, double interestRate)
+	{
+		this.accountNumber=accountNumber;
+		this.balance=balance;
+		this.interestRate=interestRate;
+	}
+	
+	public String getAccountNumber()
+	{
+		return accountNumber;
+	}
+	
+	public String setAccountNumber()
+	{
+	return accountNumber;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	public void setBalance(double bal)
+	{
+		if (balance<0)
+		
+			System.out.println("Should be greater than 0");
+			
+			else
+				balance=bal;
+		
+	
+	}
+	
+	public void setInterestRate(double intr)
+	{
+		if (interestRate<0)
+		
+			System.out.println("Should be greater than 0");
+			
+		else
+				
+			interestRate=intr;
+		
+	}
+	
+	public double getInterestRate()
+	
+	 {
+		return interestRate;
+	 }
+	
+	public double addInterest(double intr)
+	{
+		balance=balance+(balance*intr);
+		return balance;
+		
+	}
+}

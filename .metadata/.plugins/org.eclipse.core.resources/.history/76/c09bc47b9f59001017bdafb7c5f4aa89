@@ -1,0 +1,29 @@
+package example.com;
+
+public class LargestNumberinArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int [] numbers= {10,20,5,30,15,60};
+		
+		int l=calculateLargest(numbers);
+		
+		System.out.println(l + " is the largest number");
+
+	}
+
+	private static int calculateLargest(int[] numbers) {
+		// TODO Auto-generated method stub
+		
+		int l=numbers[0];
+		for (int i=1;i<numbers.length;i++)
+		{
+			if (numbers[i]>l)
+				l=numbers[i];
+		}
+		
+		return l;
+	}
+
+}

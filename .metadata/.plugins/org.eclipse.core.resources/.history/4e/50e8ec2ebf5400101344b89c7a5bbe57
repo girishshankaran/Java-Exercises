@@ -1,0 +1,12 @@
+package example.com;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ColorsManipulate {
+	
+	ArrayList<String> colors=new ArrayList<>();
+	
+	
+
+}

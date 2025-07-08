@@ -1,0 +1,19 @@
+package example.com;
+
+public class HayStackExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String haystack= "This has tiger, lion, lion, and tiger";
+		String needles []= {"lion","tiger"};
+		
+		findNeedles(haystack, needles);
+		
+	}
+
+	public static void findNeedles(String haystack,String needles[])
+	{
+		
+	}
+}

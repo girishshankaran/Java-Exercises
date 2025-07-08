@@ -1,0 +1,22 @@
+package example.com;
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Rectangle MyRect=new Rectangle();
+		MyRect.setHeight();
+		MyRect.setWidth();
+		
+		System.out.println("Height is" + MyRect.getHeight());
+		
+		System.out.println("Width is" + MyRect.getWidth());
+		
+		System.out.println("Area is" + MyRect.getArea());
+		System.out.println("Perimeter is" + MyRect.getPerimeter());
+		
+		
+	}
+
+}

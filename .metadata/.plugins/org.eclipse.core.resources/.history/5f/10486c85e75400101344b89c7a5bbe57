@@ -1,0 +1,14 @@
+package example.com;
+
+public class TestCourse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student student1=new Student("Girish",1100);
+		Course MyCourse=new Course();
+		MyCourse.add_student(student1);
+
+		
+	}
+
+}

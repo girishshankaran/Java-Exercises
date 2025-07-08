@@ -1,0 +1,29 @@
+package example.com;
+
+public class TestLibrary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Book mybook1=new Book("Happy New Year","Girish",2000);
+		Book mybook2=new Book("Happy Old Year","Simon",2001);
+		Book mybook3=new Book("Hello New Year","Peter",2002);
+		Book mybook4=new Book("Hi New Year","Bush",2003);
+		
+		Library mylib=new Library();
+		
+		mylib.addBook(mybook1);
+		mylib.addBook(mybook2);
+		mylib.addBook(mybook3);
+		mylib.addBook(mybook4);
+		
+		mylib.searchBook("Happy New Year");
+		mylib.searchBook("Happy new Year");
+		
+		mylib.removeBook("Hi New Year");
+		
+		
+
+	}
+
+}

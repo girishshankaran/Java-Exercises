@@ -1,0 +1,52 @@
+package example.com;
+import java.time.LocalDate;
+import java.util.*;
+
+public class TestFlight {
+    public static void main(String[] args) {
+        // Add passengers
+        Passenger.addPassenger(new Passenger(1, "alice"));
+        Passenger.addPassenger(new Passenger(2, "bob"));
+        Passenger.addPassenger(new Passenger(3, "carol"));
+
+        // Add flights (MM/dd/yyyy)
+        Flight.addFlight(new Flight(101, "NYC", "LAX", "07/10/2025", 1));
+        Flight.addFlight(new Flight(102, "LAX", "SFO", "07/12/2025", 1));
+        Flight.addFlight(new Flight(103, "NYC", "BOS", "06/01/2025", 2));
+        Flight.addFlight(new Flight(104, "SFO", "SEA", "07/15/2025", 1));
+
+        // Find passenger named "alice"
+        Passenger alice = null;
+        for (int id : Passenger.getPassengers()) {
+            Passenger p = Passenger.getPassenger(id);
+            if (p != null && p.getName().equals("alice")) {
+                alice = p;
+                break;
+            }
+        }
+
+        if (alice == null) {
+            System.out.println("Passenger 'alice' not found.");
+            return;
+        }
+
+        // Get all upcoming flights for alice
+        List<Flight> flights = new ArrayList<>();
+        for (int id : Flight.getFlightsByPassenger(alice.getId())) {
+            Flight f = Flight.getFlight(id);
+            if (f != null && f.getDeparture().compareTo(LocalDate.now()) > 0) {
+                flights.add(f);
+            }
+        }
+
+        // Sort flights by departure date
+        flights.sort(Comparator.comparing(Flight::getDeparture));
+
+        // Print flight details
+        for (Flight f : flights) {
+            System.out.println("Departure date: " + f.getDeparture());
+            System.out.println("    Origin: " + f.getOrigin());
+            System.out.println("    Destination: " + f.getDestination());
+        }
+    }
+}

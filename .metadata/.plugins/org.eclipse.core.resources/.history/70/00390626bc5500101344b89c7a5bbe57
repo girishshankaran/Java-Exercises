@@ -1,0 +1,15 @@
+package example.com;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String word="Malayalam";
+		
+		System.out.println(word.charAt(0));
+		System.out.println(word.length());
+
+	}
+
+}

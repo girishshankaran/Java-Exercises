@@ -1,0 +1,18 @@
+package example.com;
+
+public class TestStudent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Student myst1=new Student(100,"Girish","1");
+		Student myst2=new Student(101,"Vivaan","2");
+		Student myst3=new Student(102,"Tiana","3");
+		Student myst4=new Student(103,"Subi","4");
+	}
+	
+	StudentManager mymngr=new StudentManager();
+	
+	
+
+}

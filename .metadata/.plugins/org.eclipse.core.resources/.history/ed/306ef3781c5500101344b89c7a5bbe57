@@ -1,0 +1,22 @@
+package example.com;
+
+public class TestContactList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Contact MyContact=new Contact("Girish","9901","a@gmail.com");
+		Contact Contact1=new Contact("Tia","9902","tia@gmail.com");
+		Contact Contact2=new Contact("Vivu","9903","viv@gmail.com");
+		ContactList MyContactList=new ContactList();
+		
+		MyContactList.addContacts(MyContact);
+		MyContactList.addContacts(Contact1);
+		MyContactList.addContacts(Contact2);
+		MyContactList.searchContact("Girish");
+		MyContactList.deleteContact("Tia");
+		
+
+	}
+
+}

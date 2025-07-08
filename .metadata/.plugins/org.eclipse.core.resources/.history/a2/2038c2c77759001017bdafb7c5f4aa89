@@ -1,0 +1,14 @@
+package example.com;
+
+public class TestFlight {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Passenger passenger1=new Passenger(101,"Girish");
+		Passenger passenger2=new Passenger(102,"Vivaan");
+		Passenger passenger3=new Passenger(103,"Tiana");
+		Passenger passenger4=new Passenger(104,"Subi");
+
+	}
+
+}

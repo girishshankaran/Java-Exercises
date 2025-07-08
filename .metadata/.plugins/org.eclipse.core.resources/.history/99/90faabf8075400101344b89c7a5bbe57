@@ -1,0 +1,41 @@
+package example.com;
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("1. Addition 2. Substraction 3. Multiplication");
+		int choice = scanner.nextInt();
+		System.out.println("Enter the first number");
+		int number1 = scanner.nextInt();
+		System.out.println("Enter the second number");
+		int number2 = scanner.nextInt();
+		
+		if (choice==1)
+		{
+			int ans=calculate_sum(number1,number2);
+		}
+		
+		if (choice==2)
+		{
+			int ans=calculate_product(number1,number2);
+		}
+	}
+	
+	public static int calculate_sum(int n1,int n2)
+	{
+	  int sum=n1+n2;
+	  return(sum);
+	}
+	
+	public static int calculate_product(int n1,int n2)
+	{
+	  int ans=n1*n2;
+	  return(ans);
+	}
+
+}

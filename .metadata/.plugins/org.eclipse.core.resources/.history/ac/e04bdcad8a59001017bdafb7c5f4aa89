@@ -1,0 +1,13 @@
+package example.com;
+
+public class Passenger {
+
+	int p_id;
+	String p_name;
+	
+	Passenger(int p_id,String p_name)
+	{
+		this.p_name=p_name;
+		this.p_id=p_id;
+	}
+}

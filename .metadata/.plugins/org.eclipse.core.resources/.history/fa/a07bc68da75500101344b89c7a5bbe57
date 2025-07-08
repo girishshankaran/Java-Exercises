@@ -1,0 +1,12 @@
+package example.com;
+import java.time.LocalDate;
+
+public class Flight {
+	
+	int id;
+	String origin;
+	String destination;
+	localDate departure;
+	
+
+}

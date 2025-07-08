@@ -1,0 +1,22 @@
+package example.com;
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter an integer: ");
+		int count = scanner.nextInt();
+		int i;
+		int factorial=count;
+		
+		for (i=1;i<count;i++)
+		{
+			factorial=factorial*i;
+		}
+
+		System.out.println("Factorial is"+ factorial);
+	}
+
+}

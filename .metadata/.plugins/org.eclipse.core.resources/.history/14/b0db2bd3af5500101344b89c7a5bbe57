@@ -1,0 +1,34 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;
+
+public class FlightManagementSystem {
+    public static void main(String[] args) {
+        // ... (create passengers and flights as before)
+
+        Passenger alice = null;
+        for (int id : Passenger.getPassengers()) {
+            Passenger p = Passenger.getPassenger(id);
+            if (p.name.equals("alice")) { // FIXED here
+                alice = p;
+            }
+        }
+
+        List<Flight> flights = new ArrayList<Flight>();
+        for (int id : Flight.getFlightsByPassenger(alice.id)) {
+            Flight f = Flight.getFlight(id);
+            if (f.departure.compareTo(LocalDate.now()) > 0) {
+                flights.add(f);
+            }
+        }
+
+        flights.sort((lhs, rhs) -> lhs.departure.compareTo(rhs.departure)); // Needs Comparator import
+
+        for (Flight f : flights) {
+            System.out.println("Departure date: " + f.departure);
+            System.out.println(" Origin: " + f.origin);
+            System.out.println(" Destination: " + f.destination);
+        }
+    }
+}

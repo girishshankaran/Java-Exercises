@@ -1,0 +1,29 @@
+package example.com;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SearchElement {
+
+	ArrayList<String> MyList=new ArrayList<>();
+	
+	int i;
+	
+	public String addElement(String name)
+	{
+		MyList.add(name);
+		System.out.println(name +"added");
+		return name;
+	}
+	
+	public String findElement(String name)
+	{
+		
+	for (i=0;i<MyList.size();i++)
+	{
+		if (MyList.get(i)==name) {
+			System.out.println("Found" + name);
+			return name;
+	}
+		
+	}
+}}

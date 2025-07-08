@@ -1,0 +1,14 @@
+package example.com;
+
+public class TestAnimals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog Kyzer=new Dog();
+		Kyzer.eat("Tuffy");
+		
+		Animal Horse=new Animal();
+		Horse.eat("Kukku");
+	}
+
+}

@@ -1,0 +1,16 @@
+package example.com;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Flight {
+
+	int flightID;
+	String origin;
+	String destination;
+	LocalDate departureDate;
+	
+	ArrayList<Passenger> passenger=new ArrayList<>();
+
+	
+}	
+
